@@ -229,7 +229,7 @@ img {
   width: 270px;
 }
 
-.features-list-item::before {
+/* .features-list-item::before {
   display: block;
   content: '';
   height: 120px;
@@ -250,6 +250,17 @@ img {
 }
 .icon-astronaut::before {
   background-image: url('../images/astronaut.svg');
+} */
+.feature-list-icon {
+  display: block;
+  width: 270px;
+  height: 120px;
+  padding: 25px 100px;
+  background-color: var(--third-background-color);
+}
+.feature-icon {
+  width: 70px;
+  height: 70px;
 }
 .features-list .features-list-item + .features-list-item {
   margin-left: 30px;

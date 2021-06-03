@@ -24,8 +24,17 @@ body {
   color: var(--primary-text-color);
   overflow-x: hidden;
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
 .container {
-  margin: 0 auto;
   width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
@@ -146,7 +155,7 @@ img {
 .portfolio-nav {
   display: flex;
   justify-content: center;
-  margin-bottom: 34px;
+  margin-bottom: 50px;
 }
 .portfolio-nav .portfolio-nav-item + .portfolio-nav-item {
   margin-left: 8px;
@@ -288,6 +297,9 @@ img {
 .courses-list {
   display: flex;
 }
+.courses-section.section {
+  padding-top: 0;
+}
 .courses-list .courses-list-item + .courses-list-item {
   margin-left: 30px;
 }
@@ -304,21 +316,23 @@ img {
 .crew-section {
   background-color: var(--third-background-color);
 }
-.crew-list {
+.crew {
   display: flex;
 }
-.crew-list-item {
+.crew-list {
   background-color: var(--white-color);
   text-align: center;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
-.crew-list .crew-list-item + .crew-list-item {
+.crew .crew-list + .crew-list {
   margin-left: 30px;
 }
+.crew-list-item {
+  padding-top: 30px;
+}
 .crew-name {
-  margin-top: 30px;
   margin-bottom: 10px;
   font-weight: 500;
   font-size: 16px;
@@ -357,10 +371,12 @@ img {
 .crew-icon-item:not(:last-child) {
   margin-right: 10px;
 }
+.crew-icon-link:focus,
 .crew-icon-link:hover {
   fill: var(--white-color);
   background-color: var(--accent-color);
   border-radius: 50%;
+  outline: none;
 }
 /* Clients */
 
@@ -413,9 +429,11 @@ img {
   width: 88px;
   height: 45px;
 }
+.clients-link:focus,
 .clients-link:hover {
   border: 1px solid var(--accent-color);
   fill: var(--accent-color);
+  outline: none;
 }
 
 /* Projects */
@@ -433,6 +451,8 @@ img {
   flex-basis: calc(100% / 3 - var(--projects-list-item-gap));
   margin-left: var(--projects-list-item-gap);
   margin-top: var(--projects-list-item-gap);
+  border-right: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
 }
 .projects-list-item:hover {
@@ -566,8 +586,10 @@ img {
 .footer-icon-item:not(:last-child) {
   margin-right: 10px;
 }
-.footer-icon-item:hover {
+.footer-icon-link:focus,
+.footer-icon-link:hover {
   fill: var(--white-color);
   background-color: var(--accent-color);
   border-radius: 50%;
+  outline: none;
 }
